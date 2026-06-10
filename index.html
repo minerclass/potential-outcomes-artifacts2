@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive prospective research outcomes and community action studio for pedagogical friction, generative AI, and K-12 education.">
+  <title>Research Outcomes & Action Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Studio navigation">
+      <a class="brand" href="#orientation" data-view-link="orientation">
+        <span class="brand-mark" aria-hidden="true">OA</span>
+        <span>
+          <strong>Research Outcomes & Action Studio</strong>
+          <small>Pedagogical Friction | Prospective Planning</small>
+        </span>
+      </a>
+
+      <nav class="nav-stack" aria-label="Studio modes">
+        <button class="nav-item active" type="button" data-view="orientation"><span>01</span>Orientation</button>
+        <button class="nav-item" type="button" data-view="scenarios"><span>02</span>Scenario Lab</button>
+        <button class="nav-item" type="button" data-view="ecology"><span>03</span>Ecological Map</button>
+        <button class="nav-item" type="button" data-view="cycle"><span>04</span>Practice-to-Policy</button>
+        <button class="nav-item" type="button" data-view="decision"><span>05</span>Decision Lab</button>
+        <button class="nav-item" type="button" data-view="dissemination"><span>06</span>Dissemination</button>
+        <button class="nav-item" type="button" data-view="stewardship"><span>07</span>Stewardship</button>
+      </nav>
+
+      <section class="sidebar-note" aria-labelledby="planning-note-title">
+        <h2 id="planning-note-title">Planning Status</h2>
+        <p>This studio explores possible findings and responsible responses. It does not report dissertation results.</p>
+      </section>
+
+      <section class="sidebar-note" aria-labelledby="privacy-note-title">
+        <h2 id="privacy-note-title">Public Boundary</h2>
+        <p>No participant data is collected, stored, or displayed. All interaction remains in this browser.</p>
+      </section>
+
+      <div class="sidebar-links">
+        <a href="https://minerclass.github.io/dissertationquestionsbeta/dissertation-sites/" target="_blank" rel="noopener">Dissertation sites</a>
+        <a href="https://minerclass.github.io/writing-sites-hub/" target="_blank" rel="noopener">Writing sites</a>
+      </div>
+    </aside>
+
+    <main class="workspace" id="main-content">
+      <header class="topbar">
+        <div class="topbar-copy">
+          <p id="viewLabel">Prospective Research Outcomes</p>
+          <h1 id="viewTitle">What could the findings make possible?</h1>
+          <p id="viewDescription">Explore potential outcomes, test responsible responses, and trace every recommendation back to evidence.</p>
+        </div>
+        <div class="top-actions">
+          <span class="prospective-flag">Prospective planning, not reported findings</span>
+          <button class="secondary-button" type="button" id="printView">Print current view</button>
+        </div>
+      </header>
+
+      <section class="view active" id="view-orientation" aria-labelledby="orientation-heading">
+        <div class="orientation-hero">
+          <section class="hero-copy">
+            <p class="overline">From evidence to community judgment</p>
+            <h2 id="orientation-heading">A public studio for thinking responsibly about what comes after analysis.</h2>
+            <p>The dissertation may support the framework, complicate it, contradict it, or reveal a more useful problem. This artifact helps communities rehearse all four possibilities before any recommendation becomes a policy.</p>
+            <div class="button-row">
+              <button class="primary-button" type="button" data-go="scenarios">Explore a possible finding</button>
+              <button class="secondary-button" type="button" data-go="decision">Build a proportionate response</button>
+            </div>
+          </section>
+
+          <section class="action-canvas" aria-labelledby="action-canvas-title">
+            <div class="canvas-heading">
+              <div>
+                <p class="overline">Evidence-to-action chain</p>
+                <h3 id="action-canvas-title">Recommendations must remain traceable.</h3>
+              </div>
+              <span class="relationship-marker">Divergence is a finding</span>
+            </div>
+            <div class="action-chain" aria-label="Evidence to action chain">
+              <button type="button" data-chain="finding"><strong>Finding</strong><span>What did the evidence show?</span></button>
+              <button type="button" data-chain="interpretation"><strong>Interpretation</strong><span>What might explain it?</span></button>
+              <button type="button" data-chain="response"><strong>Community response</strong><span>What action is proportionate?</span></button>
+              <button type="button" data-chain="evaluation"><strong>Evaluation</strong><span>How will we know it helped?</span></button>
+            </div>
+            <div class="chain-detail" id="chainDetail" aria-live="polite">
+              Select a stage to inspect its responsibility and failure mode.
+            </div>
+          </section>
+        </div>
+
+        <section class="commitments-band" aria-labelledby="commitments-title">
+          <div>
+            <p class="overline">Five commitments</p>
+            <h3 id="commitments-title">The non-negotiables behind every public conclusion.</h3>
+          </div>
+          <div class="commitment-list" id="commitmentList"></div>
+        </section>
+
+        <section class="route-section" aria-labelledby="route-title">
+          <div class="section-heading">
+            <div>
+              <p class="overline">Choose a route</p>
+              <h3 id="route-title">Enter the studio through the question you need to answer.</h3>
+            </div>
+          </div>
+          <div class="route-grid" id="routeGrid"></div>
+        </section>
+      </section>
+
+      <section class="view" id="view-scenarios" aria-labelledby="scenario-heading">
+        <div class="scenario-layout">
+          <aside class="scenario-list-panel">
+            <div class="panel-heading">
+              <p class="overline">Possible outcomes</p>
+              <h2 id="scenario-heading">Select a finding to stress-test.</h2>
+            </div>
+            <div class="scenario-list" id="scenarioList"></div>
+          </aside>
+
+          <section class="scenario-stage">
+            <div class="scenario-lead">
+              <div>
+                <p class="overline" id="scenarioType">Institutional condition</p>
+                <h2 id="scenarioTitle">Policy exists. Practice still feels unsupported.</h2>
+              </div>
+              <div class="relationship-control" aria-label="Mixed methods relationship">
+                <span>Evidence relationship</span>
+                <div id="relationshipButtons"></div>
+              </div>
+            </div>
+
+            <div class="evidence-relationship">
+              <article>
+                <span>Qualitative signal</span>
+                <p id="qualSignal"></p>
+              </article>
+              <div class="relationship-core" id="relationshipCore">Divergence</div>
+              <article>
+                <span>Quantitative or document signal</span>
+                <p id="quanSignal"></p>
+              </article>
+            </div>
+
+            <div class="scenario-analysis">
+              <article>
+                <p class="overline">Interpretation</p>
+                <h3 id="scenarioInterpretation"></h3>
+                <p id="relationshipInterpretation"></p>
+              </article>
+              <article>
+                <p class="overline">Responsible response</p>
+                <h3 id="scenarioResponse"></h3>
+                <p id="scenarioAction"></p>
+              </article>
+              <article>
+                <p class="overline">Evidence limit</p>
+                <h3>What this would not justify</h3>
+                <p id="scenarioLimit"></p>
+              </article>
+            </div>
+
+            <div class="scenario-footer">
+              <p id="scenarioQuestion"></p>
+              <div class="button-row">
+                <button class="primary-button" type="button" data-go="ecology">Trace ecological impact</button>
+                <button class="secondary-button" type="button" data-go="decision">Build a response</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="view-ecology" aria-labelledby="ecology-heading">
+        <div class="ecology-layout">
+          <section class="ecology-stage">
+            <div class="section-heading compact">
+              <div>
+                <p class="overline">Bronfenbrenner-inspired systems map</p>
+                <h2 id="ecology-heading">Where could the findings create change?</h2>
+                <p>Trace how classroom experiences connect to relationships, district systems, cultural narratives, and change over time.</p>
+              </div>
+              <label class="select-label">Scenario
+                <select id="ecologyScenarioSelect"></select>
+              </label>
+            </div>
+            <div class="ecology-map" id="ecologyMap">
+              <button class="ecology-ring ring-time" type="button" data-system="time"><span>Time</span></button>
+              <button class="ecology-ring ring-culture" type="button" data-system="culture"><span>Culture</span></button>
+              <button class="ecology-ring ring-district active" type="button" data-system="district"><span>District</span></button>
+              <button class="ecology-ring ring-relationships" type="button" data-system="relationships"><span>Relationships</span></button>
+              <button class="ecology-ring ring-classroom" type="button" data-system="classroom"><span>Classroom</span></button>
+              <div class="ecology-center">
+                <span>Selected possibility</span>
+                <strong id="ecologyCenterText"></strong>
+              </div>
+            </div>
+            <div class="impact-rail">
+              <article>
+                <span>Most immediate impact</span>
+                <strong>Classroom and learning relationships</strong>
+              </article>
+              <article>
+                <span>Most sustainable leverage</span>
+                <strong>Alignment between relationships and district systems</strong>
+              </article>
+            </div>
+          </section>
+
+          <aside class="context-panel" aria-live="polite">
+            <p class="overline">Selected system</p>
+            <h2 id="systemTitle">District</h2>
+            <p id="systemDescription"></p>
+            <div class="context-sections">
+              <article><strong>What it shapes</strong><p id="systemShapes"></p></article>
+              <article><strong>Possible response</strong><p id="systemResponse"></p></article>
+              <article><strong>Equity check</strong><p id="systemEquity"></p></article>
+              <article><strong>Evidence limit</strong><p id="systemLimit"></p></article>
+            </div>
+            <button class="primary-button full" type="button" data-go="cycle">Open the practice-to-policy cycle</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-cycle" aria-labelledby="cycle-heading">
+        <div class="cycle-header">
+          <div>
+            <p class="overline">Proposed intervention</p>
+            <h2 id="cycle-heading">The Pedagogical Friction Practice-to-Policy Cycle</h2>
+            <p>A small, evidence-informed pilot that connects task design, access, professional judgment, and district support.</p>
+          </div>
+          <div class="cycle-progress">
+            <strong id="cycleProgressValue">0 / 6</strong>
+            <span>planning phases reviewed</span>
+            <div><i id="cycleProgressBar"></i></div>
+          </div>
+        </div>
+        <div class="cycle-track" id="cycleTrack"></div>
+        <div class="cycle-detail">
+          <section>
+            <p class="overline" id="cyclePhaseLabel">Phase 1</p>
+            <h3 id="cyclePhaseTitle"></h3>
+            <p id="cyclePhaseDescription"></p>
+            <div class="phase-prompts" id="cyclePrompts"></div>
+          </section>
+          <aside>
+            <strong>Completion question</strong>
+            <p id="cycleCompletion"></p>
+            <label class="review-check">
+              <input type="checkbox" id="phaseReviewed">
+              <span>I have reviewed this phase for a possible pilot.</span>
+            </label>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-decision" aria-labelledby="decision-heading">
+        <div class="decision-layout">
+          <section class="decision-form-panel">
+            <div class="panel-heading">
+              <p class="overline">Evidence-to-action decision lab</p>
+              <h2 id="decision-heading">How strong should the response be?</h2>
+              <p>Use evidence strength, risk, reversibility, privacy, and equity to choose a proportionate next step.</p>
+            </div>
+            <form id="decisionForm">
+              <label>Evidence condition
+                <select id="evidenceCondition">
+                  <option value="convergent">Strong convergence across sources</option>
+                  <option value="qualitative">Strong qualitative finding, limited quantitative support</option>
+                  <option value="quantitative">Quantitative pattern without qualitative explanation</option>
+                  <option value="divergent">Divergent findings across groups or methods</option>
+                  <option value="weak">Weak, mixed, or time-sensitive evidence</option>
+                  <option value="contradiction">Finding contradicts the framework</option>
+                </select>
+              </label>
+              <label>Potential harm if action is wrong
+                <select id="riskLevel">
+                  <option value="low">Low</option>
+                  <option value="moderate" selected>Moderate</option>
+                  <option value="high">High</option>
+                </select>
+              </label>
+              <label>Can the response be reversed?
+                <select id="reversibility">
+                  <option value="easy">Easy to reverse</option>
+                  <option value="possible" selected>Possible with effort</option>
+                  <option value="hard">Hard to reverse</option>
+                </select>
+              </label>
+              <fieldset>
+                <legend>Required checks</legend>
+                <label class="check-row"><input type="checkbox" id="privacyConcern"> Privacy, surveillance, or discrimination concern</label>
+                <label class="check-row"><input type="checkbox" id="equityTension"> Equity benefit and learning risk occur together</label>
+              </fieldset>
+              <button class="primary-button" type="submit">Generate responsible response</button>
+            </form>
+          </section>
+
+          <section class="decision-output" aria-live="polite">
+            <p class="overline">Recommended posture</p>
+            <h2 id="decisionPosture">Pilot and evaluate</h2>
+            <p id="decisionSummary"></p>
+            <div class="decision-path" id="decisionPath"></div>
+            <div class="brief-preview">
+              <div>
+                <p class="overline">Local action brief</p>
+                <h3>A bounded conclusion for community discussion</h3>
+              </div>
+              <textarea id="actionBrief" aria-label="Generated local action brief"></textarea>
+              <button class="secondary-button" type="button" id="copyBrief">Copy brief</button>
+              <span id="copyStatus" role="status"></span>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="view-dissemination" aria-labelledby="dissemination-heading">
+        <div class="dissemination-layout">
+          <section class="audience-panel">
+            <div class="panel-heading">
+              <p class="overline">Audience-specific return</p>
+              <h2 id="dissemination-heading">The community is not one audience.</h2>
+              <p>Select a group to see the product, purpose, and boundary that fit its role.</p>
+            </div>
+            <div class="audience-list" id="audienceList"></div>
+          </section>
+          <section class="audience-detail" aria-live="polite">
+            <p class="overline" id="audienceType"></p>
+            <h2 id="audienceTitle"></h2>
+            <p id="audienceNeed"></p>
+            <div class="audience-output-grid">
+              <article><strong>Best product</strong><p id="audienceProduct"></p></article>
+              <article><strong>What it should enable</strong><p id="audiencePurpose"></p></article>
+              <article><strong>What stays out</strong><p id="audienceBoundary"></p></article>
+              <article><strong>Feedback loop</strong><p id="audienceFeedback"></p></article>
+            </div>
+            <div class="sequence-line" id="disseminationSequence"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="view-stewardship" aria-labelledby="stewardship-heading">
+        <div class="stewardship-layout">
+          <section class="classification-panel">
+            <div class="panel-heading">
+              <p class="overline">Public, de-identified, or private?</p>
+              <h2 id="stewardship-heading">Practice the research-data boundary.</h2>
+              <p>Select an item, then choose where it belongs. This activity uses examples only and stores nothing beyond local progress.</p>
+            </div>
+            <div class="data-item-list" id="dataItemList"></div>
+          </section>
+          <section class="classification-stage">
+            <div class="selected-data-item">
+              <p class="overline">Selected material</p>
+              <h2 id="dataItemTitle"></h2>
+              <p id="dataItemDescription"></p>
+            </div>
+            <div class="classification-options" id="classificationOptions">
+              <button type="button" data-classification="public"><strong>Public-facing</strong><span>Safe for GitHub Pages and public scholarship</span></button>
+              <button type="button" data-classification="deidentified"><strong>De-identified analysis</strong><span>Restricted analytic material reviewed for disclosure risk</span></button>
+              <button type="button" data-classification="private"><strong>Private research data</strong><span>Approved secure storage only</span></button>
+            </div>
+            <div class="classification-feedback" id="classificationFeedback" aria-live="polite">
+              Choose the most responsible location for the selected material.
+            </div>
+            <div class="boundary-summary">
+              <article><strong>GitHub Pages can support</strong><p>Study explanation, public conceptual maps, de-identified findings, presentations, and links to public resources.</p></article>
+              <article><strong>GitHub Pages must not store</strong><p>Consent records, participant identities, transcripts, recordings, raw surveys, recruitment logs, or sensitive district examples.</p></article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
