@@ -20,10 +20,9 @@ This studio is prospective. It demonstrates possible findings and responsible de
 
 No build step or dependency installation is required.
 
-1. Create a GitHub repository.
-2. Add `index.html`, `styles.css`, `app.js`, `README.md`, and `SOURCES_AND_PRIVACY.md`.
-3. Enable GitHub Pages from the repository root.
-4. Verify the public page before sharing.
+The included `.github/workflows/pages.yml` workflow deploys the repository as a static GitHub Pages site whenever `main` is updated. If Pages has not previously been enabled, open **Settings > Pages** once and select **GitHub Actions** as the source.
+
+After deployment, verify the public page before sharing.
 
 ## Local use
 
