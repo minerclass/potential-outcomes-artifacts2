@@ -4,6 +4,8 @@ An interactive, GitHub Pages-ready public artifact for exploring possible disser
 
 *Pedagogical Friction in the Age of Generative AI and Tertiary Algorithmicity.*
 
+**Live artifact:** https://minerclass.github.io/potential-outcomes-artifacts2/
+
 This studio is prospective. It demonstrates possible findings and responsible decision processes; it does not present hypothetical scenarios as completed dissertation findings.
 
 ## What the studio includes
